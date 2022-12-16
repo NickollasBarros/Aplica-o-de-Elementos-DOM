@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Elementos DOM</title>
+</head>
+<body>
+    <h1 id="titulo" class="link">Título da minha página</h1>
+    <p id="paragrafo" class="link"> Este é o paragrafo da minha página</p>
+    <p><a class="link" href="" name="meu_link">Voltar</a></p>
+</body>
+</html>
+<script>
+
+    // Com o seletor querySelector é possível selecionar a tag à ser modificada de três formas diferentes:
+    // 1 - Selecionando o elemento do documento que deseja modificar. No exemplo abaixo foi selecionado o título h1:
+    document.querySelector("h1").style.fontSize="60pt"
+
+    // 2 - Selecionando o id do documento que deseja modificar utilizando a "#". No exemplo abaixo foi selecionado o id paragrafo:
+    document.querySelector("#paragrafo").style.fontSize="45pt"
+
+    // 3 - Selecionando a class do documento que deseja modificar utilizando o ".". No exemplo abaixo foi selecionado a class link:
+    document.querySelector(".link").style.fontSize="30pt"
+
+    // Com o seletor getElementById é possível selecionar a id que deseja alterar sem fazer a utilização da "#":
+    document.getElementById("titulo").style.color="red"
+    document.getElementById("paragrafo").style.color="green"
+
+    // Com o seletor getElementsByName é necessário informar o índice de qual name deseja alterar, pois pode conter mais de um.
+    // No exemplo abaixo utilizamos o indíce [0], por ser o único.
+    document.getElementsByName("meu_link")[0].style.color="blue"
+
+
+    // Com o seletor getElementsByClassName é necessário informar o índice de qual class deseja alterar, pois pode conter mais de uma.
+    document.getElementsByClassName("link")[2].style.fontFamily="verdana"
+</script>
